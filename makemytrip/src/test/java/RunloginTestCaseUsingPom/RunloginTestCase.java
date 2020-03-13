@@ -21,9 +21,19 @@ public class RunloginTestCase {
 	}
 	
 	@Test
-	public void loginTestPositive()
+	public void loginTestPositive() throws InterruptedException
 	{
 		lg.clickCreateorLoginButtonXpath();
+		lg.TypeEmailTextBoxXpath("test1992@test.com");
+		Thread.sleep(5000L);
+		lg.clickContinueButtonXpath();
+		Thread.sleep(5000L);
+		lg.TypePasswordTextBoxXpath("!Qwerqwer1");
+		lg.clickLoginButtonXpath();
+		Thread.sleep(3000L);
+		lg.clickSkipVerificationPopupPageButtonXpath();
+	
+		
 	}
 	
 
